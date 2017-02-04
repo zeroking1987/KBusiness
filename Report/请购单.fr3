@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<TfrxReport Version="4.10.1" DotMatrixReport="False" IniFile="\Software\Fast Reports" PreviewOptions.Buttons="4095" PreviewOptions.Zoom="1" PrintOptions.Printer="预设" PrintOptions.PrintOnSheet="0" ReportOptions.CreateDate="40520.8021542477" ReportOptions.Description.Text="" ReportOptions.LastChange="40554.8033488657" ScriptLanguage="PascalScript" ScriptText.Text="begin&#13;&#10;&#13;&#10;end." PropData="044C65667403F80003546F7002180844617461736574730101143900000020446174615365743D2252657175697265464D2E6672784465742220446174615365744E616D653D22E8AFB7E8B4ADE58D95E4BB8EE8A1A8220001143900000020446174615365743D2252657175697265464D2E6672784865642220446174615365744E616D653D22E8AFB7E8B4ADE58D95E4B8BBE8A1A8220000095661726961626C65730100055374796C650100">
+  <TfrxDataPage Name="Data" Height="1000" Left="0" Top="0" Width="1000"/>
+  <TfrxReportPage Name="Page1" PaperWidth="210" PaperHeight="297" PaperSize="9" LeftMargin="10" RightMargin="10" TopMargin="10" BottomMargin="10" ColumnWidth="0" ColumnPositions.Text="" HGuides.Text="" VGuides.Text="">
+    <TfrxReportTitle Name="ReportTitle1" Height="98.26778" Left="0" Top="18.89765" Width="718.1107">
+      <TfrxMemoView Name="Memo1" Left="279.68522" Top="26.45671" Width="117.16543" Height="45.35436" ShowHint="False" Font.Charset="1" Font.Color="-16777208" Font.Height="-37" Font.Name="宋体" Font.Style="0" ParentFont="False" Text="请购单"/>
+    </TfrxReportTitle>
+    <TfrxMasterData Name="MasterData1" Height="22.67718" Left="0" Top="177.63791" Width="718.1107" ColumnWidth="0" ColumnGap="0" DataSet="RequireFM.frxDet" DataSetName="请购单从表" RowCount="0">
+      <TfrxMemoView Name="Memo2" Left="102.04731" Top="3.77953" Width="94.48825" Height="18.89765" ShowHint="False" DataField="ItemName" DataSet="RequireFM.frxDet" DataSetName="请购单从表" Font.Charset="1" Font.Color="-16777208" Font.Height="-13" Font.Name="Arial" Font.Style="0" ParentFont="False" Text="[请购单从表.&#34;ItemName&#34;]"/>
+    </TfrxMasterData>
+  </TfrxReportPage>
+</TfrxReport>

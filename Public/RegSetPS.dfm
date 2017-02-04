@@ -1,0 +1,141 @@
+object RegSetFM: TRegSetFM
+  Left = 0
+  Top = 0
+  BorderStyle = bsDialog
+  Caption = #24658#25463#36719#20214#27880#20876
+  ClientHeight = 328
+  ClientWidth = 451
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  Position = poMainFormCenter
+  OnClose = FormClose
+  OnDestroy = FormDestroy
+  OnShow = FormShow
+  PixelsPerInch = 96
+  TextHeight = 13
+  object cxgrpbx1: TcxGroupBox
+    Left = 0
+    Top = 0
+    Align = alTop
+    Alignment = alTopRight
+    Caption = #24863#35874#20351#29992#24658#25463#36719#20214
+    ParentFont = False
+    Style.Edges = []
+    Style.Font.Charset = DEFAULT_CHARSET
+    Style.Font.Color = clWindowText
+    Style.Font.Height = -13
+    Style.Font.Name = 'Tahoma'
+    Style.Font.Style = [fsBold]
+    Style.Shadow = False
+    Style.TransparentBorder = True
+    Style.IsFontAssigned = True
+    TabOrder = 0
+    Height = 139
+    Width = 451
+    object lbl1: TLabel
+      Left = 56
+      Top = 23
+      Width = 336
+      Height = 91
+      Caption = 
+        #24744#27491#22312#20351#29992#30340#26159#26410#27880#20876#20294#27809#26377#20219#20309#21151#33021#38480#21046#30340#29256#26412#65292#24744#21487#20197#20813#36153#13#10#35797#29992'30'#22825#12290#35797#29992#21040#26399#21518#24744#21487#20197#23558#26426#22120#30721#21457#32473#25105#20204#33719#21462#27880#20876#30721#65281#24471#13#10#21040#27880#20876 +
+        #30721#21518#22635#20837#21040#19979#38754#25991#26412#26694#20013'('#25152#28041#21450#23383#27597#22343#20026#22823#20889')'#65292#28982#21518#21333#13#10#20987' '#8220#25105#35201#27880#20876#8221' '#23436#25104#27880#20876#13#10#13#10#13#10#23458#26381'QQ'#65306'1348699188 '
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+    end
+  end
+  object cxgrpbx2: TcxGroupBox
+    Left = 0
+    Top = 139
+    Align = alClient
+    Caption = #36719#20214#27880#20876
+    ParentFont = False
+    Style.Edges = []
+    Style.Font.Charset = DEFAULT_CHARSET
+    Style.Font.Color = clWindowText
+    Style.Font.Height = -13
+    Style.Font.Name = 'Tahoma'
+    Style.Font.Style = [fsBold]
+    Style.IsFontAssigned = True
+    TabOrder = 1
+    Height = 189
+    Width = 451
+    object lbl2: TLabel
+      Left = 56
+      Top = 48
+      Width = 64
+      Height = 16
+      Caption = #26426#22120#30721#65306
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object lbl3: TLabel
+      Left = 56
+      Top = 88
+      Width = 64
+      Height = 16
+      Caption = #27880#20876#30721#65306
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -13
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
+    end
+    object cxRecNo: TcxTextEdit
+      Left = 118
+      Top = 44
+      TabOrder = 0
+      Width = 274
+    end
+    object cxRegNo: TcxTextEdit
+      Left = 118
+      Top = 84
+      TabOrder = 1
+      Width = 274
+    end
+    object btnYes: TcxButton
+      Left = 195
+      Top = 127
+      Width = 75
+      Height = 25
+      Caption = #25105#35201#27880#20876
+      TabOrder = 2
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      OnClick = btnYesClick
+    end
+    object btnNo: TcxButton
+      Left = 317
+      Top = 127
+      Width = 75
+      Height = 25
+      Caption = #20197#21518#20877#35828
+      TabOrder = 3
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = []
+      ParentFont = False
+      OnClick = btnNoClick
+    end
+  end
+end

@@ -1,0 +1,1165 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{38F712BF-E09F-4979-8987-DD2BBABC05AE}</ProjectGuid>
+        <ProjectVersion>18.1</ProjectVersion>
+        <MainSource>KBusiness.dpr</MainSource>
+        <Config Condition="'$(Config)'==''">Debug</Config>
+        <DCC_DCCCompiler>DCC32</DCC_DCCCompiler>
+        <Base>True</Base>
+        <AppType>Application</AppType>
+        <FrameworkType>VCL</FrameworkType>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
+        <TargetedPlatforms>1</TargetedPlatforms>
+        <Platform>Win32</Platform>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Base' or '$(Base)'!=''">
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Release' or '$(Cfg_1)'!=''">
+        <Cfg_1>true</Cfg_1>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_1)'=='true') or '$(Cfg_1_Win32)'!=''">
+        <Cfg_1_Win32>true</Cfg_1_Win32>
+        <CfgParent>Cfg_1</CfgParent>
+        <Cfg_1>true</Cfg_1>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Config)'=='Debug' or '$(Cfg_2)'!=''">
+        <Cfg_2>true</Cfg_2>
+        <CfgParent>Base</CfgParent>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="('$(Platform)'=='Win32' and '$(Cfg_2)'=='true') or '$(Cfg_2_Win32)'!=''">
+        <Cfg_2_Win32>true</Cfg_2_Win32>
+        <CfgParent>Cfg_2</CfgParent>
+        <Cfg_2>true</Cfg_2>
+        <Base>true</Base>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Base)'!=''">
+        <SanitizedProjectName>KBusiness</SanitizedProjectName>
+        <VerInfo_Locale>2052</VerInfo_Locale>
+        <VerInfo_Keys>CompanyName=;FileDescription=;FileVersion=1.0.0.0;InternalName=;LegalCopyright=;LegalTrademarks=;OriginalFilename=;ProductName=;ProductVersion=1.0.0.0;Comments=</VerInfo_Keys>
+        <DCC_Namespace>Vcl;Vcl.Imaging;Vcl.Touch;Vcl.Samples;Vcl.Shell;System;Xml;Data;Datasnap;Web;Soap;Winapi;Data.Win;System.Win;$(DCC_Namespace)</DCC_Namespace>
+        <DCC_UsePackage>vclx;vcl;vclimg;dbrtl;Rave77VCL;bdertl;rtl;vclactnband;vcldb;vcldbx;vcltouch;xmlrtl;dsnap;dsnapcon;TeeUI;TeeDB;Tee;vclib;ibxpress;adortl;IndyCore;IndySystem;IndyProtocols;inet;intrawebdb_100_140;Intraweb_100_140;VclSmp;vclie;websnap;webdsnap;inetdb;inetdbbde;inetdbxpress;soaprtl;vclribbon;dbexpress;DbxCommonDriver;DataSnapIndy10ServerTransport;DataSnapProviderClient;DbxClientDriver;DataSnapServer;DBXInterBaseDriver;DBXMySQLDriver;dbxcds;DBXFirebirdDriver;DBXSybaseASEDriver;DBXSybaseASADriver;DBXOracleDriver;DBXMSSQLDriver;DBXInformixDriver;DBXDb2Driver;dxCoreD14;cxLibraryD14;cxEditorsD14;cxExtEditorsD14;dxmdsD14;dxBarD14;dxBarDBNavD14;dxBarExtDBItemsD14;dxBarExtItemsD14;dxRibbonD14;cxBarEditItemD14;dxdbtrD14;dxtrmdD14;dxDockingD14;dxFlowChartD14;cxPageControlD14;dxLayoutControlD14;dxNavBarD14;dxorgcD14;dxdborD14;cxGridD14;cxPivotGridD14;cxPivotGridChartD14;cxPivotGridOLAPD14;cxTreeListD14;cxTreeListdxBarPopupMenuD14;cxSchedulerD14;cxSchedulerGridD14;dxComnD14;dxsbD14;dxSkinBlueD14;dxSkinsCoreD14;dxSkinBlackD14;dxSkinCaramelD14;dxSkinCoffeeD14;dxSkinDarkRoomD14;dxSkinDarkSideD14;dxSkinFoggyD14;dxSkinGlassOceansD14;dxSkiniMaginaryD14;dxSkinLilianD14;dxSkinLiquidSkyD14;dxSkinLondonLiquidSkyD14;dxSkinMcSkinD14;dxSkinMoneyTwinsD14;dxSkinOffice2007BlackD14;dxSkinOffice2007BlueD14;dxSkinOffice2007GreenD14;dxSkinOffice2007PinkD14;dxSkinOffice2007SilverD14;dxSkinPumpkinD14;dxSkinscxPCPainterD14;dxSkinscxScheduler3PainterD14;dxSkinscxSchedulerPainterD14;dxSkinsdxBarPainterD14;dxSkinsdxDLPainterD14;dxSkinsdxLCPainterD14;dxSkinsdxNavBar2PainterD14;dxSkinsdxRibbonPainterD14;dxSkinSevenD14;dxSkinSharpD14;dxSkinSilverD14;dxSkinSpringTimeD14;dxSkinStardustD14;dxSkinSummer2008D14;dxSkinValentineD14;dxSkinXmas2008BlueD14;dcldxSkinsCoreD14;dxSpellCheckerD14;cxSpreadSheetD14;cxVerticalGridD14;dxPSLnksD14;dxPSCoreD14;vclshlctrls;dxPScxCommonD14;dxPScxExtCommonD14;dxPScxGrid6LnkD14;dxPScxPCProdD14;dxPScxSSLnkD14;dxPScxTL5LnkD14;dxPScxVGridLnkD14;dxPSTeeChartD14;dxPSDBTeeChartD14;dxPSdxOCLnkD14;dxPSdxDBOCLnkD14;dxPSdxDBTVLnkD14;dxPSdxFCLnkD14;dxPsPrVwAdvD14;tmsd2010;tmsexd2010;tmsxlsd2010;tmswizd2010;CnPackFormMisc_D14;CnPack_D14;rm_r2010;$(DCC_UsePackage)</DCC_UsePackage>
+        <DCC_DependencyCheckOutputName>HCJXC.exe</DCC_DependencyCheckOutputName>
+        <DCC_ImageBase>00400000</DCC_ImageBase>
+        <DCC_Platform>x86</DCC_Platform>
+        <DCC_E>false</DCC_E>
+        <DCC_N>false</DCC_N>
+        <DCC_S>false</DCC_S>
+        <DCC_F>false</DCC_F>
+        <DCC_K>false</DCC_K>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1)'!=''">
+        <Manifest_File>None</Manifest_File>
+        <Icon_MainIcon>HJSoftWare_Icon.ico</Icon_MainIcon>
+        <DCC_LocalDebugSymbols>false</DCC_LocalDebugSymbols>
+        <DCC_Define>RELEASE;$(DCC_Define)</DCC_Define>
+        <DCC_SymbolReferenceInfo>0</DCC_SymbolReferenceInfo>
+        <DCC_DebugInformation>0</DCC_DebugInformation>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_1_Win32)'!=''">
+        <Manifest_File>None</Manifest_File>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2)'!=''">
+        <DCC_Define>DEBUG;$(DCC_Define)</DCC_Define>
+    </PropertyGroup>
+    <PropertyGroup Condition="'$(Cfg_2_Win32)'!=''">
+        <Icon_MainIcon>KBusiness_Icon1.ico</Icon_MainIcon>
+        <Manifest_File>None</Manifest_File>
+    </PropertyGroup>
+    <ItemGroup>
+        <DelphiCompile Include="$(MainSource)">
+            <MainSource>MainSource</MainSource>
+        </DelphiCompile>
+        <DCCReference Include="Public\PublicPS.pas"/>
+        <DCCReference Include="Public\DataPS.pas">
+            <Form>DataFM</Form>
+            <DesignClass>TDataModule</DesignClass>
+        </DCCReference>
+        <DCCReference Include="Public\LoginPS.pas">
+            <Form>LoginFM</Form>
+        </DCCReference>
+        <DCCReference Include="MainPS.pas">
+            <Form>MainFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\BaseMouldPS.pas">
+            <Form>BaseMouldFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\StockModulePS.pas">
+            <Form>StockModuleFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\WareModulePS.pas">
+            <Form>WareModuleFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\InvoiceMouldPS.pas">
+            <Form>InvoiceMouldFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\HRModulePS.pas">
+            <Form>HRModuleFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\SaleModulePS.pas">
+            <Form>SaleModuleFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\MainBasePS.pas">
+            <Form>MainBaseFM</Form>
+        </DCCReference>
+        <DCCReference Include="System\DataBackPS.pas">
+            <Form>DataBackFM</Form>
+        </DCCReference>
+        <DCCReference Include="Base\BasePS.pas">
+            <Form>BaseFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\AreaPS.pas">
+            <Form>AreaFM</Form>
+        </DCCReference>
+        <DCCReference Include="System\ReportSetPS.pas">
+            <Form>ReportSetFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\ReportPS.pas">
+            <Form>ReportFM</Form>
+        </DCCReference>
+        <DCCReference Include="Base\BaseGrdPS.pas">
+            <Form>BaseGrdFM</Form>
+        </DCCReference>
+        <DCCReference Include="Base\Base1PS.pas">
+            <Form>Base1FM</Form>
+        </DCCReference>
+        <DCCReference Include="System\SysUserSetPS.pas">
+            <Form>SysUserSetFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\WarePS.pas">
+            <Form>WareFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\PrvKindPS.pas">
+            <Form>PrvKindFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\ProviderPS.pas">
+            <Form>ProviderFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\AreaQPS.pas">
+            <Form>AreaQFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\PrvKindQPS.pas">
+            <Form>PrvKindQFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\CustKindPS.pas">
+            <Form>CustKindFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\CustPS.pas">
+            <Form>CustFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\CustKindQPS.pas">
+            <Form>CustKindQFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\DeptPS.pas">
+            <Form>DeptFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\EmployeePS.pas">
+            <Form>EmployeeFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\DeptQPS.pas">
+            <Form>DeptQFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\EmpQPS.pas">
+            <Form>EmpQFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\ItemPS.pas">
+            <Form>ItemFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\ItemKindQPS.pas">
+            <Form>ItemKindQFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\WareQPS.pas">
+            <Form>WareQFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\OtherSetPS.pas">
+            <Form>OtherSetFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\IMCode.pas"/>
+        <DCCReference Include="System\UserRightPS.pas">
+            <Form>UserRightFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\AssistModulePS.pas">
+            <Form>AssistModuleFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\ListSqlServers.pas"/>
+        <DCCReference Include="System\ChangePassPS.pas">
+            <Form>ChangePassFM</Form>
+        </DCCReference>
+        <DCCReference Include="Stock\RequirePS.pas">
+            <Form>RequireFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\SBasePS.pas">
+            <Form>SBaseFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\ItemQPS.pas">
+            <Form>ItemQFM</Form>
+        </DCCReference>
+        <DCCReference Include="System\SysTableSetPS.pas">
+            <Form>SysTableSetFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\ProduceModulePS.pas">
+            <Form>ProduceModuleFM</Form>
+        </DCCReference>
+        <DCCReference Include="Stock\RequireFindPS.pas">
+            <Form>RequireFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="System\SysParamPS.pas">
+            <Form>SysParamFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\PrvQPS.pas">
+            <Form>PrvQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Base\FBasePS.pas">
+            <Form>FBaseFM</Form>
+        </DCCReference>
+        <DCCReference Include="Stock\StockOrderFindPS.pas">
+            <Form>StockOrderFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="Stock\RequireQPS.pas">
+            <Form>RequireQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Base\QBasePS.pas">
+            <Form>QBaseFM</Form>
+        </DCCReference>
+        <DCCReference Include="Stock\StockOrderQPS.pas">
+            <Form>StockOrderQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Sale\SaleOrderPS.pas">
+            <Form>SaleOrderFM</Form>
+        </DCCReference>
+        <DCCReference Include="Sale\SaleSenderFindPS.pas">
+            <Form>SaleSenderFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\CustQPS.pas">
+            <Form>CustQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Sale\SaleOrderQPS.pas">
+            <Form>SaleOrderQFM</Form>
+        </DCCReference>
+        <DCCReference Include="System\SysLogQPS.pas">
+            <Form>SysLogQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\FirstBookPS.pas">
+            <Form>FirstBookFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\ProTypePS.pas">
+            <Form>ProTypeFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\ProTypeQPS.pas">
+            <Form>ProTypeQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\RegSetPS.pas">
+            <Form>RegSetFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\RegPS.pas"/>
+        <DCCReference Include="Ware\WareInOutFindPS.pas">
+            <Form>WareInOutFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="Stock\StockPricePS.pas">
+            <Form>StockPriceFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\ColorPS.pas">
+            <Form>ColorFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\WareMonthAccountPS.pas">
+            <Form>WareMonthAccountFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\WareInOutPS.pas">
+            <Form>WareInOutFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\StockInPS.pas">
+            <Form>StockInFM</Form>
+        </DCCReference>
+        <DCCReference Include="System\FinanceDatePS.pas">
+            <Form>FinanceDateFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\WareStorageQPS.pas">
+            <Form>WareStorageQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\WareInOutQPS.pas">
+            <Form>WareInOutQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\SFCMonQPS.pas">
+            <Form>SFCMonQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Base\RBasePS.pas">
+            <Form>RBaseFM</Form>
+        </DCCReference>
+        <DCCReference Include="Stock\StockOrderReqRfPS.pas">
+            <Form>StockOrderReqRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\MatOutPS.pas">
+            <Form>MatOutFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\ProductInPS.pas">
+            <Form>ProductInFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\OtherInPS.pas">
+            <Form>OtherInFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\OtherOutPS.pas">
+            <Form>OtherOutFM</Form>
+        </DCCReference>
+        <DCCReference Include="Sale\SalePricePS.pas">
+            <Form>SalePriceFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\WareCheckPS.pas">
+            <Form>WareCheckFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\WareItemPS.pas">
+            <Form>WareItemFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\SaleOutSaleOrderRfPS.pas">
+            <Form>SaleOutSaleOrderRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\WareCheckFindPS.pas">
+            <Form>WareCheckFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\ItemBomPS.pas">
+            <Form>ItemBomFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\SaleFirstPS.pas">
+            <Form>SaleFirstFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\SaleInvoiceFindPS.pas">
+            <Form>SaleInvoicerFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\SaleInvoicePS.pas">
+            <Form>SaleInvoiceFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\SaleInvoiceSaleOutRfPS.pas">
+            <Form>SaleInvoiceSaleOutRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\SaleMonthAccountPS.pas">
+            <Form>SaleMonthAccountFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\SalePayFindPS.pas">
+            <Form>SalePayFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\SalePayInvoiceRfPS.pas">
+            <Form>SalePayInvoiceRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\SalePayPS.pas">
+            <Form>SalePayFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\StockFirstPS.pas">
+            <Form>StockFirstFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\StockInvoicePS.pas">
+            <Form>StockInvoiceFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\StockInvoiceFindPS.pas">
+            <Form>StockInvoicerFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\StockInvoiceStockInRfPS.pas">
+            <Form>StockInvoiceStockInRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\StockPayPS.pas">
+            <Form>StockPayFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\StockPayFindPS.pas">
+            <Form>StockPayFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\StockPayInvoiceRfPS.pas">
+            <Form>StockPayInvoiceRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\StockMonthAccountPS.pas">
+            <Form>StockMonthAccountFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\StockPayQPS.pas">
+            <Form>StockPayQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\SaleOutPS.pas">
+            <Form>SaleOutFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\ProductOutPS.pas">
+            <Form>ProductOutFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\ItemBomQPS.pas">
+            <Form>ItemBomQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\StockInStockOrderRfPS.pas">
+            <Form>StockInStockOrderRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Sale\SaleSenderPS.pas">
+            <Form>SaleSenderFM</Form>
+        </DCCReference>
+        <DCCReference Include="Sale\SaleSenderQPS.pas">
+            <Form>SaleSenderQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Sale\SaleSenderSaleOrderRfPS.pas">
+            <Form>SaleSenderSaleOrderRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\SaleOutSaleSenderRfPS.pas">
+            <Form>SaleOutSaleSenderRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Sale\SaleOrderFindPS.pas">
+            <Form>SaleOrderFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\WareItemQPS.pas">
+            <Form>WareItemQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\ProOrderPS.pas">
+            <Form>ProOrderFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\ProOrderFindPS.pas">
+            <Form>ProOrderFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\SGeneralPS.pas">
+            <Form>SGeneralFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\RemarkGridPS.pas">
+            <Form>RemarkGridFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\AssistInPS.pas">
+            <Form>AssistInFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\AssistOutPS.pas">
+            <Form>AssistOutFM</Form>
+        </DCCReference>
+        <DCCReference Include="Sale\SaleQPS.pas">
+            <Form>SaleQFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\WKindQPS.pas">
+            <Form>WKindQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Assist\AssistMovePS.pas">
+            <Form>AssistMoveFM</Form>
+        </DCCReference>
+        <DCCReference Include="WorkShop\ItemMoveFindPS.pas">
+            <Form>ItemMoveFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="Sale\ItemSaleQPS.pas">
+            <Form>ItemSaleQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Assist\AssistMoveInPS.pas">
+            <Form>AssistMoveInFM</Form>
+        </DCCReference>
+        <DCCReference Include="Stock\StockOrderPS.pas">
+            <Form>StockOrderFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\ItemMovePS.pas">
+            <Form>ItemMoveFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\ControlPublicPS.pas"/>
+        <DCCReference Include="Public\AMMsgPS.pas"/>
+        <DCCReference Include="Public\ASIMLib_TLB.pas"/>
+        <DCCReference Include="System\PreSendMsgPS.pas">
+            <Form>PreSendMsgFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\SysUserQPS.pas">
+            <Form>SysUserQFM</Form>
+        </DCCReference>
+        <DCCReference Include="System\MainFormSetPS.pas">
+            <Form>MainFormSetFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\SaleAccountAgeQPS.pas">
+            <Form>SaleAccountAgeQFM</Form>
+        </DCCReference>
+        <DCCReference Include="System\AboutPS.pas">
+            <Form>AboutFM</Form>
+        </DCCReference>
+        <DCCReference Include="Invoice\StockAccountAgeQPS.pas">
+            <Form>StockAccountAgeQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Base\RemarkTextPS.pas">
+            <Form>RemarkTextFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\ItemSwitchPS.pas">
+            <Form>ItemSwitchFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\ItemSwitchFindPS.pas">
+            <Form>ItemSwitchFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\ItemSwitchQPS.pas">
+            <Form>ItemSwitchQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\MatOutProOrderRfPS.pas">
+            <Form>MatOutProOrderRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\ProductInProOrderRfPS.pas">
+            <Form>ProductInProOrderRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\BaseTechPS.pas">
+            <Form>BaseTechFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\ProOrderSaleOrderRfPS.pas">
+            <Form>ProOrderSaleOrderRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\ColorQPS.pas">
+            <Form>ColorQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\SafeStoreQPS.pas">
+            <Form>SafeStoreQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Public\ShopModulePS.pas">
+            <Form>ShopModuleFM</Form>
+        </DCCReference>
+        <DCCReference Include="WorkShop\ShopMoveInPS.pas">
+            <Form>ShopMoveInFM</Form>
+        </DCCReference>
+        <DCCReference Include="WorkShop\ShopMovePS.pas">
+            <Form>ShopMoveFM</Form>
+        </DCCReference>
+        <DCCReference Include="WorkShop\ItemTechPS.pas">
+            <Form>ItemTechFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\BaseTechQPS.pas">
+            <Form>BaseTechQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\BOMMatOutItemQPS.pas">
+            <Form>BOMMatOutItemQFM</Form>
+        </DCCReference>
+        <DCCReference Include="WorkShop\ItemTechQPS.pas">
+            <Form>ItemTechQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\ProductInSaleOrderRfPS.pas">
+            <Form>ProductInSaleOrderRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\BOMMatOutQPS.pas">
+            <Form>BOMMatOutQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Stock\StockRecePS.pas">
+            <Form>StockReceFM</Form>
+        </DCCReference>
+        <DCCReference Include="Stock\StockReceFindPS.pas">
+            <Form>StockReceFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="Stock\StockReceStockOrderRfPS.pas">
+            <Form>StockReceStockOrderRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\ProDispatchPS.pas">
+            <Form>ProDispatchFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\ProDispatchFindPS.pas">
+            <Form>ProDispatchFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\ProDispatchQPS.pas">
+            <Form>ProDispatchQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\MatOutProDispatchRfPS.pas">
+            <Form>MatOutProDispatchRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\ProductInProDispatchRfPS.pas">
+            <Form>ProductInProDispatchRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\ProductInBomMatOutRfPS.pas">
+            <Form>ProductInBomMatOutRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="BaseModule\ItemBomAnalysePS.pas">
+            <Form>ItemBomAnalyseFM</Form>
+        </DCCReference>
+        <DCCReference Include="Ware\WareInOutSumQPS.pas">
+            <Form>WareInOutSumQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Assist\AssistMoveQPS.pas">
+            <Form>AssistMoveQFM</Form>
+        </DCCReference>
+        <DCCReference Include="WorkShop\ShopMoveQPS.pas">
+            <Form>ShopMoveQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Assist\AssistMoveInQPS.pas">
+            <Form>AssistMoveInQFM</Form>
+        </DCCReference>
+        <DCCReference Include="WorkShop\ShopMoveInQPS.pas">
+            <Form>ShopMoveInQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\EmpWorkRecordFindPS.pas">
+            <Form>EmpWorkRecordFindFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\EmpWorkRecordPS.pas">
+            <Form>EmpWorkRecordFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\EmpWorkRecordQPS.pas">
+            <Form>EmpWorkRecordQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\ProOrderQPS.pas">
+            <Form>ProOrderQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\OrderMatQPS.pas">
+            <Form>OrderMatQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\ProProcessQPS.pas">
+            <Form>ProProcessQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Produce\ProDispatchProOrderRfPS.pas">
+            <Form>ProDispatchProOrderRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="WorkShop\MatProDispatchRfPS.pas">
+            <Form>MatProDispatchRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="WorkShop\InProDispatchRfPS.pas">
+            <Form>InProDispatchRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="Finance\AccNameQPS.pas">
+            <Form>AccNameQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Finance\CNAccNamePS.pas">
+            <Form>CNAccNameFM</Form>
+        </DCCReference>
+        <DCCReference Include="Finance\CNAccNameQPS.pas">
+            <Form>CNAccNameQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Finance\CNBankPS.pas">
+            <Form>CNBankFM</Form>
+        </DCCReference>
+        <DCCReference Include="Finance\CNBankQPS.pas">
+            <Form>CNBankQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Finance\CNCashPS.pas">
+            <Form>CNCashFM</Form>
+        </DCCReference>
+        <DCCReference Include="Finance\CNCashQPS.pas">
+            <Form>CNCashQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Finance\CNFirstPS.pas">
+            <Form>CNFirstFM</Form>
+        </DCCReference>
+        <DCCReference Include="Finance\CNItemPS.pas">
+            <Form>CNItemFM</Form>
+        </DCCReference>
+        <DCCReference Include="Finance\CNItemQPS.pas">
+            <Form>CNItemQFM</Form>
+        </DCCReference>
+        <DCCReference Include="Finance\CNMonthAccountPS.pas">
+            <Form>CNMonthAccountFM</Form>
+        </DCCReference>
+        <DCCReference Include="Finance\CWOtherPS.pas">
+            <Form>CWOtherFM</Form>
+        </DCCReference>
+        <DCCReference Include="WorkShop\TechOutProDispatchRfPS.pas">
+            <Form>TechOutProDispatchRfFM</Form>
+        </DCCReference>
+        <DCCReference Include="RepExpand\DelphiZXIngQRCode.pas"/>
+        <DCCReference Include="RepExpand\frxExMemoView.pas"/>
+        <DCCReference Include="RepExpand\frxExMemoViewRtti.pas"/>
+        <DCCReference Include="RepExpand\frxQRCode.pas"/>
+        <DCCReference Include="RepExpand\frxQRCodeRtti.pas"/>
+        <DCCReference Include="Finance\CNMovePS.pas">
+            <Form>CNMoveFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Finance\CNMoveFindPS.pas">
+            <Form>CNMoveFindFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Assist\AssistBackPS.pas">
+            <Form>AssistBackFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Assist\AssistBackQPS.pas">
+            <Form>AssistBackQFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="WorkShop\ShopBackPS.pas">
+            <Form>ShopBackFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="WorkShop\ShopBackQPS.pas">
+            <Form>ShopBackQFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Assist\AssistOutInQPS.pas">
+            <Form>AssistOutInQFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Public\BillModulePS.pas">
+            <Form>BillModuleFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Public\ReportModulePS.pas">
+            <Form>ReportModuleFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Public\SysModulePS.pas">
+            <Form>SysModuleFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="Public\CWModulePS.pas">
+            <Form>CWModuleFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="ReportModule\SaleOutQPS.pas">
+            <Form>SaleOutQFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="ReportModule\SalePayQPS.pas">
+            <Form>SalePayQFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="BaseModule\ItemKindPS.pas">
+            <Form>ItemKindFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <DCCReference Include="ReportModule\StockInQPS.pas">
+            <Form>StockInQFM</Form>
+            <FormType>dfm</FormType>
+        </DCCReference>
+        <BuildConfiguration Include="Debug">
+            <Key>Cfg_2</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Base">
+            <Key>Base</Key>
+        </BuildConfiguration>
+        <BuildConfiguration Include="Release">
+            <Key>Cfg_1</Key>
+            <CfgParent>Base</CfgParent>
+        </BuildConfiguration>
+    </ItemGroup>
+    <Import Condition="Exists('$(BDS)\Bin\CodeGear.Delphi.Targets')" Project="$(BDS)\Bin\CodeGear.Delphi.Targets"/>
+    <Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\8.0\UserTools.proj"/>
+    <ProjectExtensions>
+        <Borland.Personality>Delphi.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Delphi.Personality>
+                <Source>
+                    <Source Name="MainSource">KBusiness.dpr</Source>
+                </Source>
+                <Parameters/>
+                <VersionInfo>
+                    <VersionInfo Name="IncludeVerInfo">True</VersionInfo>
+                    <VersionInfo Name="AutoIncBuild">False</VersionInfo>
+                    <VersionInfo Name="MajorVer">1</VersionInfo>
+                    <VersionInfo Name="MinorVer">0</VersionInfo>
+                    <VersionInfo Name="Release">0</VersionInfo>
+                    <VersionInfo Name="Build">0</VersionInfo>
+                    <VersionInfo Name="Debug">False</VersionInfo>
+                    <VersionInfo Name="PreRelease">False</VersionInfo>
+                    <VersionInfo Name="Special">False</VersionInfo>
+                    <VersionInfo Name="Private">False</VersionInfo>
+                    <VersionInfo Name="DLL">False</VersionInfo>
+                    <VersionInfo Name="Locale">1033</VersionInfo>
+                    <VersionInfo Name="CodePage">1252</VersionInfo>
+                </VersionInfo>
+                <VersionInfoKeys>
+                    <VersionInfoKeys Name="CompanyName"/>
+                    <VersionInfoKeys Name="FileDescription"/>
+                    <VersionInfoKeys Name="FileVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="InternalName"/>
+                    <VersionInfoKeys Name="LegalCopyright"/>
+                    <VersionInfoKeys Name="LegalTrademarks"/>
+                    <VersionInfoKeys Name="OriginalFilename"/>
+                    <VersionInfoKeys Name="ProductName"/>
+                    <VersionInfoKeys Name="ProductVersion">1.0.0.0</VersionInfoKeys>
+                    <VersionInfoKeys Name="Comments"/>
+                </VersionInfoKeys>
+                <Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcboffice2k230.bpl">Embarcadero C++Builder Office 2000 Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\bcbofficexp230.bpl">Embarcadero C++Builder Office XP Servers Package</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dcloffice2k230.bpl">Microsoft Office 2000 Sample Automation Server Wrapper Components</Excluded_Packages>
+                    <Excluded_Packages Name="$(BDSBIN)\dclofficexp230.bpl">Microsoft Office XP Sample Automation Server Wrapper Components</Excluded_Packages>
+                </Excluded_Packages>
+            </Delphi.Personality>
+            <Platforms>
+                <Platform value="Win32">True</Platform>
+                <Platform value="Win64">False</Platform>
+            </Platforms>
+            <Deployment Version="2">
+                <DeployFile LocalName="KBusiness.exe" Configuration="Debug" Class="ProjectOutput">
+                    <Platform Name="Win32">
+                        <RemoteName>KBusiness.exe</RemoteName>
+                        <Overwrite>true</Overwrite>
+                    </Platform>
+                </DeployFile>
+                <DeployClass Name="ProjectiOSDeviceResourceRules">
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXResource">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidClassesDexFile">
+                    <Platform Name="Android">
+                        <RemoteDir>classes</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AdditionalDebugSymbols">
+                    <Platform Name="Win32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch768">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon144">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xxhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeMipsFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\mips</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="ProjectOutput">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyFramework">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.framework</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch640">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch1024">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSDeviceDebug">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <RemoteDir>..\$(PROJECTNAME).app.dSYM\Contents\Resources\DWARF</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeX86File">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\x86</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch320">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSInfoPList">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidLibnativeArmeabiFile">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DebugSymbols">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch1536">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage470">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-normal</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon96">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xhdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage640">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-large</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPhone_Launch640x1136">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSEntitlements">
+                    <Platform Name="iOSDevice64">
+                        <RemoteDir>../</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <RemoteDir>../</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon72">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-hdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidGDBServer">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXInfoPList">
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectOSXEntitlements">
+                    <Platform Name="OSX32">
+                        <RemoteDir>../</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="iPad_Launch2048">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashStyles">
+                    <Platform Name="Android">
+                        <RemoteDir>res\values</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage426">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-small</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidSplashImageDef">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectiOSResource">
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="ProjectAndroidManifest">
+                    <Platform Name="Android">
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_DefaultAppIcon">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="File">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\Resources\StartUp\</RemoteDir>
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="Android">
+                        <Operation>0</Operation>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>0</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="AndroidServiceOutput">
+                    <Platform Name="Android">
+                        <RemoteDir>library\lib\armeabi-v7a</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Required="true" Name="DependencyPackage">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.bpl</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon48">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-mdpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_SplashImage960">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-xlarge</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="Android_LauncherIcon36">
+                    <Platform Name="Android">
+                        <RemoteDir>res\drawable-ldpi</RemoteDir>
+                        <Operation>1</Operation>
+                    </Platform>
+                </DeployClass>
+                <DeployClass Name="DependencyModule">
+                    <Platform Name="Win32">
+                        <Operation>0</Operation>
+                        <Extensions>.dll;.bpl</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice64">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="OSX32">
+                        <RemoteDir>Contents\MacOS</RemoteDir>
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSDevice32">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                    <Platform Name="iOSSimulator">
+                        <Operation>1</Operation>
+                        <Extensions>.dylib</Extensions>
+                    </Platform>
+                </DeployClass>
+                <ProjectRoot Platform="iOSDevice64" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Win64" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSDevice32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Win32" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="OSX32" Name="$(PROJECTNAME).app"/>
+                <ProjectRoot Platform="Android" Name="$(PROJECTNAME)"/>
+                <ProjectRoot Platform="iOSSimulator" Name="$(PROJECTNAME).app"/>
+            </Deployment>
+        </BorlandProject>
+        <ProjectFileVersion>12</ProjectFileVersion>
+    </ProjectExtensions>
+    <Import Condition="Exists('$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj')" Project="$(APPDATA)\Embarcadero\$(BDSAPPDATABASEDIR)\$(PRODUCTVERSION)\UserTools.proj"/>
+    <Import Project="$(MSBuildProjectName).deployproj" Condition="Exists('$(MSBuildProjectName).deployproj')"/>
+</Project>
